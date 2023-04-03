@@ -5,8 +5,8 @@
 name = input("Введите имя: ")
 surname = input("Введите фамилию: ")
 age = input("Введите возраст: ")
-with open("user_data.txt", "w") as file:
+with open("user_data.txt", "w", -1, 'utf-8') as file:
     file.write("Имя: " + name + "\n")
     file.write("Фамилия: " + surname + "\n")
     file.write("Возраст: " + age + "\n")
-print("file")
+print("Ok")
