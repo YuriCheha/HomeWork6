@@ -11,17 +11,16 @@
 #     file.write("Возраст: " + age + "\n")
 # print("Ok")
 
-ilename = 'famaly.txt'
 lines = int(input('Введите число: '))
 
 if lines <= 0:
     print('Количество строк должно быть положительным целым числом')
 else:
     try:
-        with open('famaly.csv', 'r') as file:
-            file_lines = file.readlines()
+        with open('famaly.csv', 'r') as f:
+            f_lines = f.readlines()
             print('Последние', lines, 'строк файла', ':')
-            for line in file_lines[-lines:]:
+            for line in f_lines[-lines:]:
                 print(line.strip())
     except FileNotFoundError:
         print('Файл не найден')
