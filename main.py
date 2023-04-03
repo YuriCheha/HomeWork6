@@ -16,11 +16,8 @@ lines = int(input('Введите число: '))
 if lines <= 0:
     print('Количество строк должно быть положительным целым числом')
 else:
-    try:
-        with open('famaly.csv', 'r') as f:
-            f_lines = f.readlines()
-            print('Последние', lines, 'строк файла', ':')
-            for line in f_lines[-lines:]:
-                print(line.strip())
-    except FileNotFoundError:
-        print('Файл не найден')
+    with open('famaly.csv', 'r') as f:
+        f_lines = f.readlines()
+        print('Последние', lines, 'строк файла', ':')
+        for line in f_lines[-lines:]:
+            print(line.strip())
